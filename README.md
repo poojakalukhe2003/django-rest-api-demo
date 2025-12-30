@@ -127,53 +127,73 @@ Example response:
 
 ---
 
-🔐 Environment Variables
 
-Create a .env file locally (not committed to GitHub):
+⚙️ Setup Instructions (Local Development)
 
-DEBUG=True
-SECRET_KEY=your-secret-key
-DATABASE_URL=postgresql://user:password@localhost:5432/dbname
-
-A sample .env.example file is included for reference.
-
-
----
-
-⚙️ Setup Instructions (Local)
+Follow the steps below to run the project locally.
 
 1️⃣ Clone the repository
 
-git clone <your-github-repository-url>
-cd backend
+git clone https://github.com/poojakalukhe2003/django-rest-api-demo.git
+cd django-rest-api-demo
 
-2️⃣ Create virtual environment
+
+--
+
+2️⃣ Create a virtual environment
 
 python -m venv venv
 
-3️⃣ Activate virtual environment
+---
+
+3️⃣ Activate the virtual environment
 
 Windows
 
 venv\Scripts\activate
 
-Mac/Linux
+Mac / Linux
 
 source venv/bin/activate
+
+
+---
 
 4️⃣ Install dependencies
 
 pip install -r requirements.txt
 
-5️⃣ Apply migrations
+
+---
+
+5️⃣ Configure environment variables
+
+Create a .env file in the project root using .env.example as reference:
+
+DEBUG=True
+SECRET_KEY=your-secret-key
+DATABASE_URL=postgresql://user:password@localhost:5432/dbname
+
+> Note: The .env file is intentionally not committed to GitHub for security reasons.
+
+
+---
+
+6️⃣ Apply database migrations
 
 python manage.py migrate
 
-6️⃣ Create superuser (optional)
+
+---
+
+7️⃣ Create superuser (optional)
 
 python manage.py createsuperuser
 
-7️⃣ Run development server
+
+---
+
+8️⃣ Run the development server
 
 python manage.py runserver
 
@@ -185,14 +205,13 @@ python manage.py runserver
 Admin Panel:
 http://127.0.0.1:8000/admin/
 
-APIs:
+API Endpoints:
 
 /api/products/
 
 /api/weather/
 
 /api/report/
-
 
 
 
